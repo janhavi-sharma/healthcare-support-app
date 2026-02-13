@@ -1,0 +1,124 @@
+.volunteer-registration-page {
+  min-height: 100vh;
+  background: #e9fff4 ;
+  padding: 0;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.form-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+  text-align: center
+}
+
+.form-subtitle {
+  font-size: 17px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center
+}
+
+.volunteer-form {
+  background: white;
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-input {
+  padding: 16px 18px;
+  border: 2px solid #d1fae5;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s;
+  background: white;
+}
+
+.form-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-submit-button {
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 12px;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+.form-submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.4);
+}
+
+.form-submit-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 0px auto;
+    padding: 16px;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  .form-subtitle {
+    font-size: 15px;
+  }
+
+  .volunteer-form {
+    padding: 32px 24px;
+  }
+
+  .form-group {
+    gap: 8px;
+  }
+
+  .page-header {
+    padding: 16px 20px;
+  }
+
+  .back-button {
+    font-size: 15px;
+  }
+}

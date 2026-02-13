@@ -1,0 +1,138 @@
+.patient-support-page {
+  min-height: 100vh;
+  background: #f0e4ff;
+  padding: 0;
+}
+
+.form-container-support {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-title-support {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-subtitle-support {
+  font-size: 16px;
+  color: #51637c;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.support-form {
+  margin-top: 22px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group-support {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label-support {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-input-support {
+  padding: 16px 18px;
+  border: 2px solid #e9d5ff;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s;
+  background: white;
+}
+
+.form-input-support:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.1);
+}
+
+.form-input-support::placeholder {
+  color: #94a3b8;
+}
+
+.form-textarea-support {
+  padding: 16px 18px;
+  border: 2px solid #e9d5ff;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s;
+  line-height: 1.6;
+  min-height: 100px;
+}
+
+.form-textarea-support:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.1);
+}
+
+.form-textarea-support::placeholder {
+  color: #94a3b8;
+}
+
+.form-submit-button-support {
+  padding: 18px 40px;
+  background: #bb7cff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 12px;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+.form-submit-button-support:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.4);
+}
+
+.form-submit-button-support:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-container-support {
+    margin: 0px auto;
+    padding: 16px;
+  }
+
+  .form-title-support {
+    font-size: 28px;
+  }
+
+  .form-subtitle-support {
+    font-size: 15px;
+  }
+
+  .support-form {
+    padding: 32px 24px;
+  }
+
+  .form-group-support {
+    gap: 8px;
+  }
+}
