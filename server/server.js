@@ -2,10 +2,16 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
 const app = express();
+
+// Needed for ES modules (__dirname fix)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Middleware
 app.use(cors());
@@ -19,19 +25,6 @@ import contactRoutes from "./routes/contactRoutes.js";
 app.use("/api/support", supportRoutes);
 app.use("/api/volunteers", volunteerRoutes);
 app.use("/api/contact", contactRoutes);
-    
-// DB Connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.log(err));
-
-const PORT = process.env.PORT || 5000;
-console.log("Connected to:", mongoose.connection.name);
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-const path = require("path");
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
@@ -40,3 +33,14 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
   });
 }
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB Connected");
+
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => console.log("MongoDB connection error:", err));
